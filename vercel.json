@@ -2,7 +2,8 @@
   "build": {
     "env": {
       "PYTHON_VERSION": "3.11"
-    }
+    },
+    "command": "python3.11 main.py"
   },
   "functions": {
     "api/**/*.py": {
