@@ -1,15 +1,16 @@
 {
-  "build": {
-    "env": {
-      "PYTHON_VERSION": "3.11"
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.11" }
     },
-    "command": "python3.11 main.py"
-  },
-  "functions": {
-    "api/**/*.py": {
-      "runtime": "python3.11"
+    {
+      "src": "frontend_build/**/*",
+      "use": "@vercel/static"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/api/(.*)",
