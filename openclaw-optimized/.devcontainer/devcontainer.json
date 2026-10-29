@@ -1,0 +1,14 @@
+{
+  "name": "OpenClaw Optimized",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/devcontainers/features/node:1": {"version": "24"}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "ms-azuretools.vscode-docker"]
+    }
+  },
+  "postCreateCommand": "python3 -m py_compile manus_stream_bridge.py && bash -n start-openclaw-stack.sh stop-openclaw-stack.sh"
+}

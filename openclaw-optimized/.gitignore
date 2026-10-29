@@ -1,0 +1,7 @@
+.openclaw-stack/
+*.log
+*.pid
+*.png
+qr.json
+.env
+.env.*
